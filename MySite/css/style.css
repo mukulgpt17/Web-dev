@@ -1,0 +1,223 @@
+body{
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+
+    text-align: center;
+}
+img
+{
+
+    padding: 10px;
+}
+
+
+hr{
+
+    border-style: dotted none none none;
+    /* border-; */
+    /* border-top: 4px; */
+    border-top: 8px dotted #D8E3E7;
+    width: 8%;
+
+}
+/* div
+{
+background-color: #D8E3E7;
+} */
+
+a{
+    color: #11999E;
+}
+
+h1
+{
+margin-block-start: 0.0em;
+margin-block-end: 0.0em;
+font-family: 'Sacramento', cursive;
+font-size: 100px;
+
+}
+p{
+    font-family: 'Lora';
+}
+/* Classes */ 
+
+.top
+{
+    width: 100%;
+    /* height: 500px; */
+    background-color: #D8E3E7;
+    /* padding: 8px; */
+    position: relative;
+    margin: 0;
+    padding-top:10%;
+}
+
+.middle-container
+{
+    width: 100%;
+    height: 500px;
+    background-color: #51C4D3;
+    margin: 0;
+    /* #51C4D3*/ 
+}
+
+.skills
+{
+    width: 100%;
+    /* height: 500px/; */
+    background-color: #126E82;
+    position: relative;
+    /* padding:10px */
+
+
+}
+
+.contact-me
+{
+    width: 100%;
+    height: 500px;
+    background-color: #132C33;
+    color: floralwhite;
+}
+
+.lower-cl
+{
+    position: absolute;
+    top:33%;
+    left: 10%;
+    /* margin-bottom: 0; */
+}
+
+.upper-cl
+{
+
+    position: absolute;
+    top:10%;
+    right: 10%;
+
+}
+
+.bottom-container
+{
+    color: white;
+    background-color: #132C33;
+    margin: 0;
+    padding:0%
+
+}
+
+.mySkill
+{
+    padding: 10px ;
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    color: floralwhite;
+    font-size: 300%;
+}
+.student
+{
+    /* font-weight: normal;
+     */
+     font-family: 'Lora';
+    line-height: 2;
+    color:#A2A2A1FF;
+} 
+
+.student:hover{
+    color:floralwhite;
+}
+.skill-row
+{
+    width: 70%;
+    color:floralwhite;
+    margin: 10px auto 0px auto ;
+    padding: 35px;
+    /* position: relative; */
+    text-align: left;
+
+}
+
+.code1
+{
+    width: 15%;
+    height: 25%;
+    float: left;
+    padding:0;
+}
+
+.code2
+{
+    width: 15%;
+    height: 25%;
+    float: right;
+    padding:0;
+}   
+
+
+
+.btn {
+    background: #9bd1f5;
+    background-image: -webkit-linear-gradient(top, #9bd1f5, #477d9e);
+    background-image: -moz-linear-gradient(top, #9bd1f5, #477d9e);
+    background-image: -ms-linear-gradient(top, #9bd1f5, #477d9e);
+    background-image: -o-linear-gradient(top, #9bd1f5, #477d9e);
+    background-image: linear-gradient(to bottom, #9bd1f5, #477d9e);
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+    border-radius: 10px;
+    font-family: Arial;
+    color: floralwhite;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+
+    /* margin:15px */
+  }
+  
+  .btn:hover {
+    background: #c6d8e3;
+    background-image: -webkit-linear-gradient(top, #c6d8e3, #70afd6);
+    background-image: -moz-linear-gradient(top, #c6d8e3, #70afd6);
+    background-image: -ms-linear-gradient(top, #c6d8e3, #70afd6);
+    background-image: -o-linear-gradient(top, #c6d8e3, #70afd6);
+    background-image: linear-gradient(to bottom, #c6d8e3, #70afd6);
+    text-decoration: none;
+  }
+
+  .Profile
+  {   
+      padding-top: 5%;
+      width: 15%;
+  }
+
+  .intro
+  {
+    width: 33.33%;
+    margin: auto;
+    color: floralwhite;
+    font-size: large;
+
+  }
+
+  .hello
+  {
+
+    color:floralwhite;
+    font-size: xxx-large;
+    padding-bottom: 0;
+    margin-bottom: 2%;
+    margin-top: 2%;
+  }
+
+  .hi
+  {
+    color:#A2A2A1FF;
+  }
+
+  .hi:hover
+  {
+      color: floralwhite;
+  }  
