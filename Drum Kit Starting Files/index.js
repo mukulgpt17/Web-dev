@@ -6,7 +6,30 @@ for (var i=0;i<7;i++)
         function ()
         {
             
-            switch(this.innerHTML)
+            makeSound(this.innerHTML);
+            makeAnimation(this.innerHTML);
+        }
+        )
+}
+
+
+
+
+
+document.addEventListener("keypress",function(event)
+    {
+        makeSound(event.key);
+        makeAnimation(event.key);
+    }
+);
+
+
+
+
+function makeSound(event)
+{
+
+    switch(event)
             {
                 case 'w':
                    var te= new  Audio("sounds/crash.mp3");
@@ -36,6 +59,19 @@ for (var i=0;i<7;i++)
                    var te= new Audio("sounds/tom-4.mp3")
                     te.play();
             }
-        }
-        )
+
+
+}
+
+
+function makeAnimation(event)
+{
+
+var elem=document.querySelector("."+event);
+elem.classList.add("pressed");
+setTimeout(function()
+{
+   elem.classList.remove("pressed");
+},100);
+
 }
