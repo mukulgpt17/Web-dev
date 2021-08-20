@@ -1,4 +1,4 @@
-alert("hello");
+
 
 button_col=["red","blue","green","yellow"];
 
