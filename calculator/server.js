@@ -2,7 +2,7 @@ const express=require("express");
 const app =express();
 const bodyParser=require("body-parser");
 
-app.use(bodyParser.urlencoded({extended:true}));
+app.use(express.urlencoded({extended:true}));
  
 app.get("/",function(req,res){
     res.sendFile(__dirname+"/index.html");
@@ -12,7 +12,8 @@ app.get("/",function(req,res){
 app.post("/",function(req,res)
 {
     console.log(req.body);
-    res.send("Data received");
+    var ans=Number(req.body.First)+Number(req.body.Second);
+    res.send("Data received "+ ans);
 })
 
 app.listen(3000,function()
