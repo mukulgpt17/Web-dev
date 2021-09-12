@@ -1,0 +1,15 @@
+{
+  "name": "weatherproject",
+  "version": "1.0.0",
+  "description": "Weather prohject ",
+  "main": "app.js",
+  "scripts": {
+    "test": "7sting89"
+  },
+  "author": "Mukul_Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
