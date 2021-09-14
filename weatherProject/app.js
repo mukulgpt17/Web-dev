@@ -53,17 +53,6 @@ app.post("/",function(req,resp)
 
 })
 
-
-
-
-
-
-
-
-
-
-
-
 app.listen(3000,function()
 {
     console.log("Server is ruuning");
