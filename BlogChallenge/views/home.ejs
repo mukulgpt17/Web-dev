@@ -1,0 +1,11 @@
+<%- include('partials/header'); -%>
+
+   <% data.forEach((elem,ind)=> { %> 
+   <% var te=ind %>  
+   <% var ss=(elem[te].post).substring(0,100)  %>
+   <% var url="posts/"+te%>
+    <h1><%=elem[te].title%></h1>
+    <p><%=ss%>... <a href=<%=url%>>Read More  </a></p>
+  <% }) %> 
+
+<%- include('partials/footer'); -%>
