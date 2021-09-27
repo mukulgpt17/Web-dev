@@ -2,14 +2,18 @@
 <body>
     <h1 id="heading" class="box"><%=list_name%> </h1>
     
-    <form action="/" method="post" class="box">    
-        
+     
+        <div class="box">
        <% for(var i=0;i<gern.length;i++){ %>
-        <div class="item">
-            <input type="checkbox">
-            <p><%=gern[i] %></p>
-        </div>
+            <form  action="/delete" method="post" >
+            <div class="item">
+                <input type="checkbox" name=<%=list_name%> value=<%=gern[i]._id %>  onchange="this.form.submit()">   
+                <p><%=gern[i].name %></p>
+            </div>
+        </form>
         <%} %>
+        </div>
+        <form action="/" method="post" class="box"> 
        <div class="item">
             <input type="text" name="work" autocomplete="off" >
             <button type="submit" name="button" value=<%=list_name%>>+</button>
