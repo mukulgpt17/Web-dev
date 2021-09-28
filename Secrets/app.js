@@ -1,16 +1,21 @@
 //jshint esversion:6
 require('dotenv').config();
-const md5 = require('md5');
 const express = require("express");
 const ejs = require("ejs");
 const mongoose = require('mongoose');
 var encrypt = require('mongoose-encryption');
-const bcrypt = require('bcrypt');
+
 const app = express();
 
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({extended:true}));
 app.use(express.static("public"));
+
+
+
+const md5 = require('md5');
+const bcrypt = require('bcrypt');
+
 
 mongoose.connect("mongodb://localhost:27017/userDB");
 
@@ -37,7 +42,7 @@ app.route("/login")
 .post(function(req,res)
 {
    const email=req.body.username
-   const password=md5(req.body.password)
+   const password=(req.body.password)
    console.log(email,password);
 
     User.findOne({"email":email},function(err,result)
@@ -47,16 +52,13 @@ app.route("/login")
         {
             if (result)
             {
-                if (result.password==password)
-                {
+                bcrypt.compare(password, result.password, function(err, result) {
+                   
+                    if (result)
                     res.render("secrets");
-                }
-                else{
-                    console.log("User does not exists ");
-                }
+                });
             }
         }
-
     })
 })
 
@@ -68,19 +70,21 @@ app.route("/register")
 })
 .post(function(req,res){
 
-    const newUser = new User(
-        {
-            email:req.body.username,
-            password:md5(req.body.password)
-        } 
-    )
-
-    newUser.save(function(err)
-    {
-        if(err)console.log(err)
-        else
-        res.render("secrets");
-    });
+    bcrypt.hash(req.body.password, saltRounds, function(err, hash) {
+                
+                const newUser =new User(
+                    {
+                        email:req.body.username,
+                        password:hash
+                    }
+                )
+                newUser.save(function(err)
+                {
+                 if(err)console.log(err)
+                 else
+                res.render("secrets");
+                 });
+    }); 
 });
 
 app.listen(3000, function() {
