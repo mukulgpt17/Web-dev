@@ -17,7 +17,7 @@ app.get("/",function(req,resp)
 app.post("/",function(req,resp)
 {
     var city=req.body.cityName;
-    var key="3a9615e1a2c44c731a41445605a60785";
+    var key=process.env.API_KEY
     var url ="https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+key+"&units=metric";
 
     http.get(url,(res) => {
