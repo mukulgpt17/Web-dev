@@ -1,5 +1,4 @@
 //1. Create a new React app.
-w
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App.jsx";
