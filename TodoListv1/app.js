@@ -5,8 +5,7 @@ app.use(express.urlencoded({extended:true}));
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
-mongoose.connect("mongodb+srv://admin-mukul:muk6217@cluster0.pe4ti.mongodb.net/toDoList?retryWrites=true&w=majority");
-
+mongoose.connect(process.env.webLink);
 const itemSchema = new mongoose.Schema(
     {
         name:String
@@ -178,8 +177,6 @@ app.post("/:title",function(req,res)
 
 
 let port = process.env.PORT || 4000;
-
-
 app.listen(port,function()
 {
     console.log("Server is running");
